@@ -1,0 +1,93 @@
+{
+  "name": "secrets",
+  "version": "1.0.0",
+  "main": "./App.tsx",
+  "scripts": {
+    "start:dev": "NODE_ENV=development expo start",
+    "android:dev": "NODE_ENV=development expo start --android",
+    "ios:dev": "NODE_ENV=development expo start --ios",
+    "web:dev": "NODE_ENV=development expo start --web",
+    "eject": "expo eject",
+    "firebase": "firebase emulators:start",
+    "updateSnapshots": "jest -u --coverage=false",
+    "testDebug": "jest -o --watch --coverage=false",
+    "testCoverage": "jest --coverage=true",
+    "storybook": "sb-rn-get-stories && STORYBOOK_ENABLED='true' expo start",
+    "storybook:ios": "sb-rn-get-stories && STORYBOOK_ENABLED='true' expo ios",
+    "storybook:android": "sb-rn-get-stories && STORYBOOK_ENABLED='true' expo android",
+    "storybook-generate": "sb-rn-get-stories",
+    "storybook-watch": "sb-rn-watcher"
+  },
+  "dependencies": {
+    "@expo/metro-config": "0.7.1",
+    "@expo/webpack-config": "^18.0.1",
+    "@react-native-async-storage/async-storage": "1.17.11",
+    "@react-native-community/datetimepicker": "6.7.3",
+    "@react-navigation/bottom-tabs": "6.5.7",
+    "@react-navigation/material-top-tabs": "6.6.2",
+    "@react-navigation/native": "6.1.6",
+    "@react-navigation/native-stack": "6.9.12",
+    "expo": "^48.0.10",
+    "expo-device": "~5.2.1",
+    "expo-firebase-core": "~6.0.0",
+    "expo-image-picker": "~14.1.1",
+    "expo-location": "~15.1.1",
+    "expo-status-bar": "~1.4.4",
+    "firebase": "9.22.0",
+    "firebase-admin": "11.8.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.71.7",
+    "react-native-autoscroll-flatlist": "1.11.2",
+    "react-native-fs": "2.20.0",
+    "react-native-keyboard-aware-scroll-view": "0.9.5",
+    "react-native-pager-view": "6.1.2",
+    "react-native-safe-area-context": "4.5.0",
+    "react-native-screens": "~3.20.0",
+    "react-native-tab-view": "3.5.1",
+    "react-native-web": "~0.18.10",
+    "uuid": "9.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.21.8",
+    "@react-native-community/slider": "^4.4.2",
+    "@storybook/addon-actions": "^7.0.2",
+    "@storybook/addon-controls": "^7.0.2",
+    "@storybook/addon-ondevice-actions": "^6.5.2",
+    "@storybook/addon-ondevice-controls": "^6.5.2",
+    "@storybook/addon-react-native-web": "^0.0.20",
+    "@storybook/react-native": "^6.5.2",
+    "@testing-library/jest-native": "5.4.2",
+    "@testing-library/react-native": "12.1.2",
+    "@types/jest": "29.5.1",
+    "@types/react": "~18.0.27",
+    "@types/react-native": "~0.72.0",
+    "babel-loader": "9.1.2",
+    "babel-plugin-react-native-web": "^0.19.2",
+    "jest": "29.5.0",
+    "jest-expo": "48.0.2",
+    "prettier": "2.8.8",
+    "react-native-dotenv": "3.4.8",
+    "react-test-renderer": "18.2.0",
+    "typescript": "^4.9.4"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/coverage/**",
+      "!**/node_modules/**",
+      "!**/babel.config.js",
+      "!**/jest.setup.js"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test|__test__).[jt]s?(x)"
+    ]
+  },
+  "private": true
+}
